@@ -2,6 +2,8 @@ logLevel in compile := Level.Warn
 
 scalacOptions += "-deprecation"
 
+javacOptions in Compile ++= Seq("-target", "1.7", "-source", "1.7")
+
 lazy val main_raml = project.in(file("."))
 
 name := "raml-scala-parser"
