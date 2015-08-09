@@ -2,6 +2,10 @@ logLevel in compile := Level.Warn
 
 scalacOptions += "-deprecation"
 
+scalaVersion := "2.11.7"
+
+compileOrder := CompileOrder.ScalaThenJava
+
 javacOptions in Compile ++= Seq("-target", "1.7", "-source", "1.7")
 
 lazy val main_raml = project.in(file("."))
